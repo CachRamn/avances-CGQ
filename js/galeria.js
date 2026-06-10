@@ -60,9 +60,9 @@
     {
       cat: 'instalaciones',
       titulo: 'Comedor',
-      img: null,
+      img: 'img/carrousel/comedor.webp',
       span: null,
-      sugerencia: 'Foto del comedor con las mesas montadas'
+      desc: 'Un comedor amplio y luminoso donde cada residente disfruta de sus alimentos en compañía, con mesas accesibles y un ambiente tranquilo y familiar.'
     },
 
     // ---- ACTIVIDADES ----
@@ -83,48 +83,48 @@
     {
       cat: 'actividades',
       titulo: 'Pintura y manualidades',
-      img: null,
+      img: 'img/carrousel/pintura-manualidades.webp',
       span: null,
-      sugerencia: 'Foto de residentes pintando o haciendo manualidades'
+      desc: 'Talleres de arte donde la creatividad no tiene edad. Pintar estimula la motricidad fina, despierta recuerdos y llena de color cada jornada.'
     },
     {
       cat: 'actividades',
       titulo: 'Música y canto',
-      img: null,
-      span: null,
-      sugerencia: 'Foto de una sesión de música, canto o baile'
+      img: 'img/carrousel/musica-canto.webp',
+      span: '2x1',
+      desc: 'La música en vivo une a residentes, familias y personal en celebraciones llenas de alegría, baile y canciones que todos recuerdan.'
     },
 
     // ---- TERAPIAS ----
     {
       cat: 'terapias',
       titulo: 'Terapia física',
-      img: null,
+      img: 'img/carrousel/terapia-fisica.webp',
       span: '2x1',
-      sugerencia: 'Foto de una sesión de rehabilitación / fisioterapia'
+      desc: 'Sesiones de activación y rehabilitación en nuestro jardín: ejercicios suaves al aire libre que mantienen la movilidad, el equilibrio y el bienestar.'
     },
     {
       cat: 'terapias',
       titulo: 'Estimulación cognitiva',
-      img: null,
+      img: 'img/carrousel/estimulacion-cognitiva.webp',
       span: null,
-      sugerencia: 'Foto de ejercicios de memoria o estimulación cognitiva'
+      desc: 'Juegos de memoria, atención y lógica diseñados para mantener la mente activa y fortalecer las capacidades de cada residente día con día.'
     },
 
     // ---- ATENCIÓN MÉDICA ----
     {
       cat: 'medica',
       titulo: 'Consulta médica',
-      img: null,
+      img: 'img/carrousel/consulta-medica.webp',
       span: null,
-      sugerencia: 'Foto de una consulta o valoración médica'
+      desc: 'Consultorio equipado para la valoración y el seguimiento clínico de cada residente, con atención médica profesional y cercana.'
     },
     {
       cat: 'medica',
       titulo: 'Cuidado de enfermería',
-      img: null,
+      img: 'img/carrousel/cuidado-enfermeria.webp',
       span: null,
-      sugerencia: 'Foto del personal de enfermería atendiendo a un residente'
+      desc: 'Personal de enfermería atento las 24 horas: control de signos vitales, ministración de medicamentos y cuidado constante con calidez humana.'
     },
 
     // ---- CONVIVENCIA ----
@@ -145,7 +145,7 @@
     {
       cat: 'convivencia',
       titulo: 'Convivencia y festejos',
-      img: 'img/carrousel/actividad.jpg',
+      img: 'img/carrousel/convivencia-festejos.webp',
       span: null,
       desc: 'El corazón del centro es la convivencia diaria: la compañía, las risas compartidas y el acompañamiento cálido en cada momento.'
     },

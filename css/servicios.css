@@ -11,8 +11,8 @@
   --srv-text-muted: #6B5B52;
   --srv-border:     #E8DDD8;
   --srv-radius:     10px;
-  --srv-shadow:     0 2px 12px rgba(139, 26, 26, 0.06);
-  --srv-shadow-md:  0 6px 24px rgba(139, 26, 26, 0.10);
+  --srv-shadow:     0 2px 8px rgba(139, 26, 26, 0.07);
+  --srv-shadow-md:  0 4px 14px rgba(139, 26, 26, 0.12);
   --ease-out:       cubic-bezier(0.23, 1, 0.32, 1);
 }
 
@@ -31,20 +31,6 @@ section.srv-hero {
   overflow: hidden;
 }
 
-/* Textura diagonal muy sutil — añade profundidad sin imágen */
-section.srv-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: repeating-linear-gradient(
-    -48deg,
-    transparent,
-    transparent 48px,
-    rgba(255, 255, 255, 0.022) 48px,
-    rgba(255, 255, 255, 0.022) 49px
-  );
-  pointer-events: none;
-}
 
 /* Línea decorativa inferior */
 section.srv-hero::after {
@@ -214,7 +200,7 @@ section.srv-seccion.srv-bg-alt {
   margin: 0 auto;
   box-shadow: var(--srv-shadow);
   border: 1px solid var(--srv-border);
-  border-left: 3px solid var(--srv-primary);
+  border-top: 3px solid var(--srv-primary);
 }
 
 .srv-equipo h3 {
