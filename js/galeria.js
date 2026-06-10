@@ -53,9 +53,9 @@
     {
       cat: 'instalaciones',
       titulo: 'Fachada y recepción',
-      img: null,
+      img: 'img/carrousel/fachada-recepcion.webp',
       span: null,
-      sugerencia: 'Foto de la entrada principal / recepción del centro'
+      sugerencia: 'La entrada principal del centro: acceso amplio y sin escalones desde el jardín, con su puerta de madera y la carpa que da sombra al área verde. Un recibimiento cálido y seguro para residentes y visitas.'
     },
     {
       cat: 'instalaciones',
@@ -151,10 +151,10 @@
     },
     {
       cat: 'convivencia',
-      titulo: 'Visita familiar',
-      img: null,
+      titulo: 'Acompañamiento 24/7',
+      img: 'img/carrousel/acompanamiento-24-7.webp',
       span: null,
-      sugerencia: 'Foto de un residente con su familia de visita'
+      sugerencia: 'Cuidadores atentos todo el día acompañan a cada residente en sus rutinas de activación y movilidad. Cercanía, paciencia y cariño en cada momento, dentro y fuera del centro.'
     }
   ];
 
