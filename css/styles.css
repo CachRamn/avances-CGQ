@@ -1155,3 +1155,183 @@ textarea:focus {
     animation: none;
   }
 }
+
+/* =====================================================
+   SECCIÓN: MISIÓN, VISIÓN Y VALORES
+   ===================================================== */
+
+.mision-valores {
+  padding: 80px 0;
+  background: #faf8f5;
+}
+
+.mv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 48px;
+}
+
+.mv-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 36px 28px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  border-top: 4px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mv-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.11);
+}
+
+.mv-card--mision  { border-top-color: #c0392b; }
+.mv-card--vision  { border-top-color: #8b5e3c; }
+.mv-card--valores { border-top-color: #6c8c6c; }
+
+.mv-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #f5f0eb;
+  margin-bottom: 20px;
+}
+
+.mv-card--mision  .mv-card-icon { background: #fdecea; color: #c0392b; }
+.mv-card--vision  .mv-card-icon { background: #f5ede4; color: #8b5e3c; }
+.mv-card--valores .mv-card-icon { background: #eef3ee; color: #4a7a4a; }
+
+.mv-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #2c2c2c;
+  margin-bottom: 14px;
+}
+
+.mv-card p {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.97rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+.mv-valores-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 16px;
+}
+
+.mv-valores-list li {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.93rem;
+  color: #555;
+  padding-left: 14px;
+  position: relative;
+}
+
+.mv-valores-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #4a7a4a;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .mv-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* =====================================================
+   SECCIÓN: CERTIFICACIONES Y LICENCIAS
+   ===================================================== */
+
+.certificaciones {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 48px;
+}
+
+.cert-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #f9f9f9;
+  border: 1px solid #e8e3dd;
+  border-radius: 12px;
+  padding: 24px 28px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cert-card:hover {
+  border-color: #c0392b;
+  box-shadow: 0 4px 16px rgba(192, 57, 43, 0.09);
+}
+
+.cert-badge {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #fdecea;
+  color: #c0392b;
+}
+
+.cert-badge--cofepris {
+  background: #e8f4ec;
+  color: #2e7d46;
+}
+
+.cert-card--cofepris:hover {
+  border-color: #2e7d46;
+  box-shadow: 0 4px 16px rgba(46, 125, 70, 0.09);
+}
+
+.cert-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cert-label {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #888;
+}
+
+.cert-number {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #2c2c2c;
+  letter-spacing: 0.02em;
+  word-break: break-all;
+}
+
+@media (max-width: 700px) {
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+}
