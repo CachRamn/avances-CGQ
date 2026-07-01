@@ -1,75 +1,3 @@
-const API_BASE = 'http://localhost:3000';
-
-/* =====================
-   FORMULARIO DE CONTACTO
-   ===================== */
-const formContacto = document.getElementById('form-contacto');
-const formRespuesta = document.getElementById('form-respuesta');
-
-if (formContacto) {
-  formContacto.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    const datos = {
-      nombre:   formContacto.nombre.value.trim(),
-      email:    formContacto.email.value.trim(),
-      telefono: formContacto.telefono.value.trim(),
-      mensaje:  formContacto.mensaje.value.trim(),
-    };
-
-    try {
-      const res = await fetch(`${API_BASE}/api/contacto`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(datos),
-      });
-
-      const json = await res.json();
-
-      mostrarRespuesta(
-        res.ok ? 'exito' : 'error',
-        res.ok
-          ? '¡Mensaje enviado! Te contactaremos pronto.'
-          : json.mensaje || 'Ocurrió un error. Intenta nuevamente.'
-      );
-
-      if (res.ok) formContacto.reset();
-    } catch {
-      mostrarRespuesta('error', 'No se pudo conectar con el servidor.');
-    }
-  });
-}
-
-function mostrarRespuesta(tipo, texto) {
-  formRespuesta.textContent = texto;
-  formRespuesta.className = `form-respuesta ${tipo}`;
-  formRespuesta.hidden = false;
-
-  setTimeout(() => {
-    formRespuesta.hidden = true;
-  }, 5000);
-}
-
-/* =====================
-   BOTÓN WHATSAPP
-   ===================== */
-async function cargarWhatsapp() {
-  const btnWhatsapp = document.getElementById('btn-whatsapp');
-  if (!btnWhatsapp) return;
-
-  try {
-    const res = await fetch(`${API_BASE}/api/whatsapp`);
-    if (!res.ok) return;
-
-    const { numero, mensaje } = await res.json();
-    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
-    btnWhatsapp.href = url;
-  } catch {
-    // Si la API no responde, el botón queda deshabilitado silenciosamente
-    btnWhatsapp.style.display = 'none';
-  }
-}
-
 /* =====================
    CARRUSELES
    ===================== */
@@ -167,7 +95,6 @@ function iniciarTransiciones() {
    INIT
    ===================== */
 document.addEventListener('DOMContentLoaded', () => {
-  cargarWhatsapp();
   document.querySelectorAll('.carrusel').forEach(iniciarCarrusel);
   iniciarTransiciones();
   iniciarParallaxHero();
